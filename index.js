@@ -233,4 +233,10 @@ if (!isOwner && !isGroup && config.MODE === "groups") return;
     });
 }
 
-connectToWA().catch(err => console.log(err));
+app.get("/", (req, res) => {
+    res.send("Queen Spriky MD started✅");
+    });
+    app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
+    setTimeout(() => {
+    connectToWA()
+    }, 4000);
